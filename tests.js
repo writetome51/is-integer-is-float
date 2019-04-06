@@ -1,69 +1,57 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", {value: true});
-var isObject_notObject_1 = require("./index");
+var isInteger = require("./index").isInteger;
+var isFloat = require("./index").isFloat;
 
 
-if (isObject_notObject_1.isObject([]))
-	console.log('test 1 passed');
-else
-	console.log('test 1 FAILED');
+if (isInteger(1)) console.log('test 1 passed');
+else console.log('test 1 FAILED');
+
+if (isInteger(10000000098765432120000001100000000)) console.log('test 2 passed');
+else console.log('test 2 FAILED');
+
+if (isInteger(0)) console.log('test 3 passed');
+else console.log('test 3 FAILED');
+
+if (isInteger(-1)) console.log('test 4 passed');
+else console.log('test 4 FAILED');
+
+if (isInteger(Infinity)) console.log('test 5 FAILED');
+else console.log('test 5 passed');
+
+if (isInteger(NaN)) console.log('test 6 FAILED');
+else console.log('test 6 passed');
+
+if (isInteger('1')) console.log('test 7 FAILED');
+else console.log('test 7 passed');
+
+if (isInteger(1.01)) console.log('test 8 FAILED');
+else console.log('test 8 passed');
+
+if (isInteger(true)) console.log('test 9 FAILED');
+else console.log('test 9 passed');
+
+if (isInteger([])) console.log('test 10 FAILED');
+else console.log('test 10 passed');
+
+if (isInteger({})) console.log('test 11 FAILED');
+else console.log('test 11 passed');
 
 
-if (isObject_notObject_1.isObject({}))
-	console.log('test 2 passed');
-else
-	console.log('test 2 FAILED');
+if (isFloat(1.01)) console.log('test 12 passed');
+else console.log('test 12 FAILED');
 
+if (isFloat(1.00000000001)) console.log('test 13 passed');
+else console.log('test 13 FAILED');
 
-if (isObject_notObject_1.notObject(null))
-	console.log('test 3 passed');
-else
-	console.log('test 3 FAILED');
+if (isFloat(-1.00000000001)) console.log('test 13A passed');
+else console.log('test 13A FAILED');
 
+if (isFloat(Infinity)) console.log('test 14 FAILED');
+else console.log('test 14 passed');
 
-if (isObject_notObject_1.notObject('asdf'))
-	console.log('test 4 passed');
-else
-	console.log('test 4 FAILED');
+if (isFloat(NaN)) console.log('test 15 FAILED');
+else console.log('test 15 passed');
 
-
-if (isObject_notObject_1.notObject(10))
-	console.log('test 5 passed');
-else
-	console.log('test 5 FAILED');
-
-
-if (isObject_notObject_1.notObject(true))
-	console.log('test 6 passed');
-else
-	console.log('test 6 FAILED');
-
-
-if (isObject_notObject_1.notObject(undefined))
-	console.log('test 7 passed');
-else
-	console.log('test 7 FAILED');
-
-
-// Even if string is created using String() conversion function, it's
-// not considered an object:
-var str = String('boo');
-if (isObject_notObject_1.notObject(str))
-	console.log('test 8 passed');
-else
-	console.log('test 8 FAILED');
-
-
-if (isObject_notObject_1.notObject(function() {
-	return '';
-}))
-	console.log('test 9 passed');
-else
-	console.log('test 9 FAILED');
-
-
-var sym = Symbol('r');
-if (isObject_notObject_1.notObject(sym))
-	console.log('test 10 passed');
-else
-	console.log('test 10 FAILED');
+if (isFloat('1')) console.log('test 16 FAILED');
+else console.log('test 16 passed');

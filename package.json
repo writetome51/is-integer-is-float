@@ -1,19 +1,21 @@
 {
-  "name": "@writetome51/is-object-not-object",
+  "name": "@writetome51/is-integer-is-float",
   "version": "1.0.0",
-  "description": "2 functions that check if passed argument is or is not an object.  Null is not considered an object",
+  "description": "Functions that check if argument is integer or float",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/is-object-not-object.git"
+    "url": "git+https://github.com/writetome51/is-integer-is-float.git"
   },
   "keywords": [
     "is",
     "not",
-    "object",
+    "number",
+    "integer",
+    "float",
     "type-checking",
     "type",
     "check",
@@ -22,9 +24,10 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/is-object-not-object/issues"
+    "url": "https://github.com/writetome51/is-integer-is-float/issues"
   },
-  "homepage": "https://github.com/writetome51/is-object-not-object#readme",
+  "homepage": "https://github.com/writetome51/is-integer-is-float#readme",
   "dependencies": {
+    "@writetome51/is-finite-number": "~1.0.0"
   }
 }

@@ -1,22 +1,23 @@
-# isObject(arg): boolean
+# isInteger(arg): boolean
 
-Returns true if `arg` is array or object.  
-Does not consider null an object.
+Returns true only if `arg` is integer of type 'number'.
 
-# notObject(arg): boolean
+# notInteger(arg): boolean
 
-Returns true if `arg` is null, undefined, function, symbol, number, boolean,  
-or string.
+# isFloat(arg): boolean
+
+Returns true only if `arg` is float of type 'number'.
 
 
 ## Installation
-`npm i  @writetome51/is-object-not-object`
+`npm i  @writetome51/is-integer-is-float`
 
 ## Loading
 ```
 // if using TypeScript:
-import { isObject, notObject } from '@writetome51/is-object-not-object';
+import { isInteger, notInteger, isFloat } from '@writetome51/is-integer-is-float';
 // if using ES5 JavaScript:
-var isObject = require('@writetome51/is-object-not-object').isObject;
-var notObject = require('@writetome51/is-object-not-object').notObject;
+var  isInteger = require('@writetome51/is-integer-is-float').isInteger
+var notInteger = require('@writetome51/is-integer-is-float').notInteger;
+var isFloat = require('@writetome51/is-integer-is-float').isFloat;
 ```

@@ -1,18 +1,25 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
+Object.defineProperty(exports, "__esModule", { value: true });
+var isFintNum_1 = require("@writetome51/is-finite-number");
 
 
-// Returns true if arg is object, and does not consider null an object.
+// if arg ends with .0 (i.e, 1.0), this returns true.
 
-function isObject(arg) {
-	return !(arg === null || typeof arg !== 'object');
+function isInteger(arg) {
+    return ( isFintNum_1.isFiniteNumber(arg) && Number.isInteger(arg)); // no errors.
 }
-exports.isObject = isObject;
+exports.isInteger = isInteger;
 
 
-// Will return true if arg is null.
-
-function notObject(arg) {
-	return !(isObject(arg));
+function notInteger(arg) {
+    return (!(isInteger(arg)));
 }
-exports.notObject = notObject;
+exports.notInteger = notInteger;
+
+
+// if arg ends with .0 (i.e, 1.0), this returns false.
+
+function isFloat(arg) {
+    return ( isFintNum_1.isFiniteNumber(arg) && notInteger(arg));
+}
+exports.isFloat = isFloat;
