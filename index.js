@@ -1,25 +1,20 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var isFintNum_1 = require("@writetome51/is-finite-number");
+import { isFiniteNumber } from '@writetome51/is-finite-number';
 
 
 // if arg ends with .0 (i.e, 1.0), this returns true.
 
-function isInteger(arg) {
-    return ( isFintNum_1.isFiniteNumber(arg) && Number.isInteger(arg)); // no errors.
+export function isInteger(arg) {
+    return ( isFiniteNumber(arg) && Number.isInteger(arg)); // no errors.
 }
-exports.isInteger = isInteger;
 
 
-function notInteger(arg) {
+export function notInteger(arg) {
     return (!(isInteger(arg)));
 }
-exports.notInteger = notInteger;
 
 
 // if arg ends with .0 (i.e, 1.0), this returns false.
 
-function isFloat(arg) {
-    return ( isFintNum_1.isFiniteNumber(arg) && notInteger(arg));
+export function isFloat(arg) {
+    return ( isFiniteNumber(arg) && notInteger(arg));
 }
-exports.isFloat = isFloat;

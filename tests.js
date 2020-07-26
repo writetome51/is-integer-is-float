@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", {value: true});
-var isInteger = require("./index").isInteger;
-var isFloat = require("./index").isFloat;
+import {isInteger, isFloat} from './index.js';
 
 
 if (isInteger(1)) console.log('test 1 passed');
