@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/is-integer-is-float",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Functions that check if argument is integer or float",
   "main": "index.js",
   "type": "module",
@@ -29,6 +29,5 @@
   },
   "homepage": "https://github.com/writetome51/is-integer-is-float#readme",
   "dependencies": {
-    "@writetome51/is-finite-number": "^2.0.0"
   }
 }
